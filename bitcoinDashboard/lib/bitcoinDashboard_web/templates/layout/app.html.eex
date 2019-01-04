@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BitcoinDashboard · Phoenix Framework</title>
+
+    <link href="<%= Routes.static_path(@conn, "/vendor/bootstrap/css/bootstrap.min.css"  )%>" rel="stylesheet"/>
+    <link href="<%= Routes.static_path(@conn, "/vendor/fontawesome-free/css/all.min.css"  )%>" rel="stylesheet" type="text/css">
+    <link href="<%= Routes.static_path(@conn, "/vendor/datatables/dataTables.bootstrap4.css" )%>" rel="stylesheet"/>
+    <link href="<%= Routes.static_path(@conn, "/css/sb-admin.css") %>" rel="stylesheet"/>
+    
+  </head>
+  <body >
+      <navbar style="position: fixed;left: 0;right: 0;z-index: 100;">
+        <%= render BitcoinDashboardWeb.SharedView, "navbar.html", assigns %>
+      </navbar>
+      
+        <sidebar style="position: fixed;top: 50px; z-index: 100;">
+          <%= render BitcoinDashboardWeb.SharedView, "sidebar.html", assigns %>
+        </sidebar>
+       
+        <div  style="position: absolute;left: 15%; top: 50px; width: 80%;">
+          <%= render @view_module, @view_template, assigns %>
+        </div>
+      
+      <!-- JavaScript imports -->
+  
+      <!-- Custom scripts for all pages-->
+      <!--<script src="js/sb-admin.min.js"></script> -->
+      
+      <!-- Bootstrap core JavaScript-->
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/vendor/jquery/jquery.min.js" ) %>" ></script>
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/vendor/bootstrap/js/bootstrap.bundle.min.js" ) %>" ></script>
+
+      <!-- Core plugin JavaScript-->
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/vendor/jquery-easing/jquery.easing.min.js" ) %>" ></script>
+
+      <!-- Page level plugin JavaScript-->
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/vendor/chart.js/Chart.js" ) %>" ></script>
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/vendor/datatables/jquery.dataTables.js" ) %>" ></script>
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/vendor/datatables/dataTables.bootstrap4.js" ) %>" ></script>
+
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/sb-admin.min.js") %> "></script>
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %> "></script>
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/myapp.js") %> "></script>
+      <!-- Demo scripts for this page-->
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/demo/datatables-demo.js") %>" ></script>
+
+      <!-- Custom scripts for all pages-->
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/sb-admin.min.js" ) %>" ></script>
+
+      <!-- Demo scripts for this page-->
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/demo/datatables-demo.js" ) %>" ></script>
+
+      <script>require("js/app").App.run()</script>
+  </body>
+</html>

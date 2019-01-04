@@ -1,0 +1,109 @@
+<body class="bg-dark">
+  <div id="wrapper">
+    
+    <div id="content-wrapper">
+    <!-- <section class="container" style="margin: 20px 0;">
+      <center >
+        <button class="btn btn-success" > Generate Wallets </button>
+      </center>
+    </section> -->
+
+    <div id="wallet-list" class="row"></div>
+    
+
+    <!-- <section class="container" style="margin: 20px 0;">
+      <center >
+        <button class="btn btn-success" id="mineButton"> Mine </button>
+      </center>
+    </section> -->
+    <div id="view-wallet-data" class="row"></div>
+    
+    <div id="mine-data" class="row"></div>
+
+    <div id="generated-transaction-data"></div>
+
+    <div id="generate-wallets-for-transaction" class="row" style="display: none;">
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Generate Transaction</h5>
+              <p class="card-text">
+                <div class="row">
+                  <div class="col-md-3">
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">From Wallet </label>
+                          </div>
+                          <select class="custom-select" name="fromWallet" id="fromWallet">
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">To Wallet </label>
+                          </div>
+                          <select class="custom-select" name="toWallet" id="toWallet">
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">BTC</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1" id="transactionAmount">
+                          </div>
+                    </div>
+                    <div class="col-md-3">
+                        <center >
+                          <button class="btn btn-success" id="generateTransactionButton"> Send </button>
+                        </center>
+                    </div>
+                </div>
+              </p>
+              
+            </div>
+          </div>
+
+        
+    </div>
+
+    <div id="view-blockchain-data" class="row"></div>
+
+    <div id="transactions-data" style="color:white;display:none;">
+      <table id="transactionTable" class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Transaction Hash</th>
+            <th scope="col">Timestamp</th>
+            <th scope="col">Amount(BTC)</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+
+      <table id="unconfirmedTransactionTable" class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Transaction Hash</th>
+            <th scope="col">Timestamp</th>
+            <th scope="col">Amount(BTC)</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div id="view-charts-data" style="display:none;">
+        <canvas id="bar-chart" width="800" height="450" style="background:white"></canvas>
+        <canvas id="line-chart" width="800" height="450" style="background:white"></canvas>
+    </div>
+  </div>
+</div>
+</body>
